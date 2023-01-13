@@ -31,9 +31,9 @@ public class CheckoutPipelineTest {
         assertEquals(paymentSummary.getRetailTotal(), 0.0);
     }
 
-    @Test //TODO
+    @Test
     void executeAllPassedCheckoutSteps() {
-
+        // Exercise - implement testing passing through all checkout steps
     }
 
 }

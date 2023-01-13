@@ -22,4 +22,11 @@ public class RetailPriceCheckoutStep implements CheckoutStep {
 
         checkoutContext.setRetailPriceTotal(retailTotal);
     }
+
+    public double applyPromotion(Promotion promotion, BasketItem item, double price) {
+        /*
+         * Implement applyPromotion method
+         */
+        return retailTotal;
+    }
 }

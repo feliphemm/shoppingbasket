@@ -48,9 +48,8 @@ public class BasketTest {
         assertEquals(basketSize.get(2).getQuantity(), 10);
     }
 
-
     @Test
-    void consolidateBasket() {
-
+    void consolidateBasketTest() {
+        // Exercise - implement the unit test for consolidate items
     }
 }
