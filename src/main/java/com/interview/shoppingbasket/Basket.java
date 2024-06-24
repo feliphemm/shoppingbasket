@@ -2,6 +2,7 @@ package com.interview.shoppingbasket;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Basket {
     private List<BasketItem> items = new ArrayList<>();
@@ -21,5 +22,15 @@ public class Basket {
 
     public void consolidateItems() {
         // Exercise - implement this function
+
+        for(int i = 0; i <= getItems().size(); i++) {
+            for (int j = i + 1; j < getItems().size(); j++) {
+                if (getItems().get(i).getProductCode().equals(getItems().get(j).getProductCode())) {
+                    getItems().get(i).setQuantity(getItems().get(i).getQuantity() + getItems().get(j).getQuantity());
+                    getItems().remove(j);
+                    j = j - 1;
+                }
+            }
+        }
     }
 }
