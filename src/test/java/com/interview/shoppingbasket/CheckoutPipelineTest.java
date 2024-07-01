@@ -34,6 +34,13 @@ public class CheckoutPipelineTest {
     @Test
     void executeAllPassedCheckoutSteps() {
         // Exercise - implement testing passing through all checkout steps
+        PricingService pricingService = null;
+
+        checkoutStep1 = new BasketConsolidationCheckoutStep();
+        checkoutStep2 = new RetailPriceCheckoutStep(pricingService);
+        checkoutPipeline.addStep(checkoutStep1);
+        checkoutPipeline.addStep(checkoutStep2);
+
     }
 
 }
